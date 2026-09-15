@@ -1,1 +1,11 @@
-{}
+{
+  {
+    "id": "net.kiwi.cli",
+    "name": "SwCLI",
+    "author": "Kiziyon",
+    "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher_data/icons/cli.png",
+    "version": "1",
+    "description": "A mod that lets you run Lua programs!",
+    "downloadUrl": "https://github.com/lw-kizii/_/releases/download/mods/cli.zip"
+  },
+}
