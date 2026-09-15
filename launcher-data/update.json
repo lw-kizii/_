@@ -1,4 +1,5 @@
 {
   version: 80,
-  directUrl: "https://github.com/lw-kizii/launcher/releases/8.0"
+  directUrl: "https://github.com/lw-kizii/launcher/releases/8.0",
+  notes: "Updated launcher!"
 }
