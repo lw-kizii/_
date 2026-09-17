@@ -7,5 +7,14 @@
     "version": "1",
     "description": "A mod that lets you run Lua programs!",
     "downloadUrl": "https://github.com/lw-kizii/_/releases/download/mods/cli.zip"
+  },
+  {
+    "id": "com.swordiforge.MV",
+    "name": "SwordigoMV",
+    "author": "Mr.mogocs",
+    "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher_data/icons/mv.png",
+    "version": "?",
+    "description": "A Swordigo mod with reworked content, also known as Swordigo Mogocs version!",
+    "downloadUrl": "https://github.com/lw-kizii/_/releases/download/mods/mv.zip"
   }
 ]
