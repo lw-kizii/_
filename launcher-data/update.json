@@ -1,5 +1,5 @@
 {
-  "version": 81,
-  "directUrl": "https://github.com/lw-kizii/launcher/releases/8.1",
-  "notes": "Updated launcher!"
+  "version": 84,
+  "directUrl": "https://github.com/lw-kizii/launcher/releases/8.4",
+  "notes": "Fixed a major bug regarding overlays."
 }
