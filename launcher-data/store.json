@@ -3,7 +3,7 @@
     "id": "net.kiwi.cli",
     "name": "SwCLI",
     "author": "Kiziyon",
-    "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher_data/icons/cli.png",
+    "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/cli.png",
     "version": "1",
     "description": "A mod that lets you run Lua programs!",
     "downloadUrl": "https://github.com/lw-kizii/_/releases/download/mods/cli.zip"
@@ -12,7 +12,7 @@
     "id": "com.swordiforge.MV",
     "name": "SwordigoMV",
     "author": "Mr.mogocs",
-    "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher_data/icons/mv.png",
+    "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/mv.png",
     "version": "?",
     "description": "A Swordigo mod with reworked content, also known as Swordigo Mogocs version!",
     "downloadUrl": "https://github.com/lw-kizii/_/releases/download/mods/mv.zip"
@@ -21,7 +21,7 @@
     "id": "in.aevora.gesty",
     "name": "Gesty - Gesture Controls",
     "author": "Small QC",
-    "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher_data/icons/gesty.png",
+    "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/gesty.png",
     "version": "1.6",
     "description": "A Swordigo mod which adds gesture based touch controls!",
     "downloadUrl": "https://github.com/lw-kizii/_/releases/download/mods/gestys.zip"
