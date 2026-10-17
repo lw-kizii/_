@@ -35,4 +35,13 @@
     "description": "Swordigo but the Camera is 3D!",
     "downloadUrl": "https://github.com/lw-kizii/_/releases/download/mods/3d.zip"
   },
+    {
+    "id": "redbat.mods.xpera",
+    "name": "Xpera's Doom",
+    "author": "Redbat Mods",
+    "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/rbm_xd.png",
+    "version": "1",
+    "description": "A mod where Xpera griefs your base and you must take revenge.",
+    "downloadUrl": "https://github.com/lw-kizii/_/releases/download/mods/xperasdoom.zip"
+  },
 ]
