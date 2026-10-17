@@ -2,7 +2,7 @@
   {
     "id": "net.kiwi.cli",
     "name": "SwCLI",
-    "author": "Kiziyon",
+    "author": "Kizi",
     "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/cli.png",
     "version": "1",
     "description": "A mod that lets you run Lua programs!",
@@ -25,5 +25,14 @@
     "version": "1.6",
     "description": "A Swordigo mod which adds gesture based touch controls!",
     "downloadUrl": "https://github.com/lw-kizii/_/releases/download/mods/gestys.zip"
-  }
+  },
+  {
+    "id": "net.kiwi.3d",
+    "name": "Swordigo3D",
+    "author": "Kizi",
+    "icon": "https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/3d.png",
+    "version": "1",
+    "description": "Swordigo but the Camera is 3D!",
+    "downloadUrl": "https://github.com/lw-kizii/_/releases/download/mods/3d.zip"
+  },
 ]
