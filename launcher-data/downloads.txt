@@ -1,1 +1,7 @@
-net.kiwi.cli=1337
+# Auto-generated downloads list
+# Format: asset_name=count
+3d.zip=49
+cli.zip=157
+gestys.zip=24
+mv.zip=194
+xperasdoom.zip=33
