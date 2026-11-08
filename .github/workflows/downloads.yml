@@ -25,7 +25,7 @@ jobs:
       - name: Fetch Release Download Counts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python build_downloads.py
+        run: python downloads_builder.py
 
       - name: Commit and push downloads.txt
         run: |
