@@ -1,0 +1,13 @@
+id="net.kiwi.cli"
+name="SwCLI"
+version="1.0"
+description="A mod that lets you run Lua programs..."
+longDescription="""
+## Markdown Test
+Does *this* work?
+
+# Header
+`test`
+"""
+downloadUrl="https://github.com/lw-kizii/_/releases/download/mods/cli.zip"
+iconUrl="https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/net.kiwi.cli.png"
