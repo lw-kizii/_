@@ -14,6 +14,7 @@ def clean_str(s):
 
 # Mapping assets to ID
 asset_to_id = {}
+id_to_mod = {}
 for toml_path in glob.glob("launcher-data/mods/*.toml"):
   try:
     mod_id = ""
@@ -29,10 +30,11 @@ for toml_path in glob.glob("launcher-data/mods/*.toml"):
           eq = line.find("=")
           if eq > 0:
             download_url = clean_str(line[eq + 1 :])
-    if download_url and mod_id:
-      asset_name = download_url.split("/")[-1].lower()
-      asset_to_id[asset_name] = mod_id
-    elif mod_id:
+    if mod_id:
+      id_to_mod[mod_id] = 0
+      if download_url:
+        asset_name = download_url.split("/")[-1].lower()
+        asset_to_id[asset_name] = mod_id
       fn = os.path.basename(toml_path).replace(".toml", ".zip").lower()
       asset_to_id[fn] = mod_id
   except Exception as e:
@@ -50,7 +52,7 @@ token = os.environ.get("GITHUB_TOKEN")
 if token:
   req.add_header("Authorization", f"token {token}")
 
-lines = ["# Mods (sorted by downloads!)"]
+mod_counts = {}
 try:
   with urllib.request.urlopen(req) as resp:
     releases = json.loads(resp.read().decode("utf-8"))
@@ -60,14 +62,21 @@ try:
         count = asset.get("download_count", 0)
         if name:
           asset_key = name.lower()
-          mod_id = asset_to_id.get(asset_key)
-          if not mod_id:
-            mod_id = (
-                asset_key[:-4] if asset_key.endswith(".zip") else asset_key
-            )
-          lines.append(f"{mod_id}={count}")
+          if asset_key in asset_to_id:
+            mod_id = asset_to_id[asset_key]
+            mod_counts[mod_id] = count
 except Exception as e:
   print(f"Error fetching releases: {e}")
+
+for mod_id in id_to_mod:
+  if mod_id not in mod_counts:
+    mod_counts[mod_id] = 0
+
+sorted_mods = sorted(mod_counts.items(), key=lambda x: x[1], reverse=True)
+
+lines = ["# Mods (sorted by downloads!)"]
+for mod_id, count in sorted_mods:
+  lines.append(f"{mod_id}={count}")
 
 os.makedirs("launcher-data", exist_ok=True)
 with open("launcher-data/downloads.txt", "w", encoding="utf-8") as f:
