@@ -1,6 +1,2 @@
 # Mods (sorted by downloads!)
-3d=49
 net.kiwi.cli=157
-gestys=24
-mv=194
-xperasdoom=33
