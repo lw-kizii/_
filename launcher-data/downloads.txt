@@ -1,7 +1,6 @@
-# Auto-generated downloads list
-# Format: asset_name=count
-3d.zip=49
-cli.zip=157
-gestys.zip=24
-mv.zip=194
-xperasdoom.zip=33
+# Mods (sorted by downloads!)
+3d=49
+net.kiwi.cli=157
+gestys=24
+mv=194
+xperasdoom=33
