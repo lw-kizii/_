@@ -1,1 +1,1 @@
-net.kiwi.cli 1337
+net.kiwi.cli=1337
