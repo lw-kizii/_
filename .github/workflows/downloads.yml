@@ -2,7 +2,7 @@ name: Update Downloads Count
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '*/30 * * * *'
   push:
     paths:
       - 'launcher-data/mods/**'
