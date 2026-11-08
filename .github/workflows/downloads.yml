@@ -29,6 +29,13 @@ jobs:
           python -c '
           import os, glob, json, urllib.request
 
+          def clean_str(s):
+              s = s.strip()
+              for c in ["\"", "\'"]:
+                  if s.startswith(c) and s.endswith(c) and len(s) >= 2:
+                      s = s[1:-1]
+              return s.strip()
+
           # Mapping assets to ID
           asset_to_id = {}
           for toml_path in glob.glob("launcher-data/mods/*.toml"):
@@ -41,11 +48,11 @@ jobs:
                           if line.startswith("id"):
                               eq = line.find("=")
                               if eq > 0:
-                                  mod_id = line[eq + 1:].strip(" \"'\t")
+                                  mod_id = clean_str(line[eq + 1:])
                           elif line.startswith("downloadUrl") or line.startswith("download"):
                               eq = line.find("=")
                               if eq > 0:
-                                  download_url = line[eq + 1:].strip(" \"'\t")
+                                  download_url = clean_str(line[eq + 1:])
                   if download_url and mod_id:
                       asset_name = download_url.split("/")[-1].lower()
                       asset_to_id[asset_name] = mod_id
