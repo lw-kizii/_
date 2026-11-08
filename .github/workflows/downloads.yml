@@ -27,8 +27,35 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python -c '
-          import os, json, urllib.request
+          import os, glob, json, urllib.request
 
+          # Mapping assets to ID
+          asset_to_id = {}
+          for toml_path in glob.glob("launcher-data/mods/*.toml"):
+              try:
+                  mod_id = ""
+                  download_url = ""
+                  with open(toml_path, "r", encoding="utf-8") as f:
+                      for line in f:
+                          line = line.strip()
+                          if line.startswith("id"):
+                              eq = line.find("=")
+                              if eq > 0:
+                                  mod_id = line[eq + 1:].strip(" \"'\t")
+                          elif line.startswith("downloadUrl") or line.startswith("download"):
+                              eq = line.find("=")
+                              if eq > 0:
+                                  download_url = line[eq + 1:].strip(" \"'\t")
+                  if download_url and mod_id:
+                      asset_name = download_url.split("/")[-1].lower()
+                      asset_to_id[asset_name] = mod_id
+                  elif mod_id:
+                      fn = os.path.basename(toml_path).replace(".toml", ".zip").lower()
+                      asset_to_id[fn] = mod_id
+              except Exception as e:
+                  print(f"Error reading {toml_path}: {e}")
+
+          # Fetching downloads!
           req = urllib.request.Request(
               "https://api.github.com/repos/lw-kizii/_/releases",
               headers={"User-Agent": "Downloads-Builder", "Accept": "application/vnd.github+json"}
@@ -37,7 +64,7 @@ jobs:
           if token:
               req.add_header("Authorization", f"token {token}")
 
-          lines = ["# Auto-generated downloads list", "# Format: asset_name=count"]
+          lines = ["# Mods (sorted by downloads!)"]
           try:
               with urllib.request.urlopen(req) as resp:
                   releases = json.loads(resp.read().decode("utf-8"))
@@ -46,7 +73,11 @@ jobs:
                           name = asset.get("name", "")
                           count = asset.get("download_count", 0)
                           if name:
-                              lines.append(f"{name}={count}")
+                              asset_key = name.lower()
+                              mod_id = asset_to_id.get(asset_key)
+                              if not mod_id:
+                                  mod_id = asset_key[:-4] if asset_key.endswith(".zip") else asset_key
+                              lines.append(f"{mod_id}={count}")
           except Exception as e:
               print(f"Error fetching releases: {e}")
 
