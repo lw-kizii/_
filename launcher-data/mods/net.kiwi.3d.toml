@@ -1,0 +1,21 @@
+id = "net.kiwi.3d"
+name = "Swordigo3D"
+author = "Kizi"
+version = "1"
+description = "A Swordigo mod that makes the camera 3D..."
+longDescription = """
+A mod that's actually... *Swordigo 3D*? Inspired by #L and NeverTrolls, this mod is the perfect Swordigo 3D mod. It allows you to drag across your screen to move your camera. The camera is locked at the player.
+
+## Credits
+1. QuantumCreeper/SwordigoDesktop Team for the SceneGrid hook. (The Rendering Fix)
+2. #L and NeverTrolls for the Swordigo 3D idea.
+3. Kizi (me) for coding the mod! ^^
+
+## Future Updates?
+- 3D Player Facing Direction.
+- Better Camera Placement.
+- 3D Movement.
+- Background Fixes.
+"""
+iconUrl = "https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/3d.png"
+downloadUrl = "https://github.com/lw-kizii/_/releases/download/mods/3d.zip"

@@ -1,0 +1,10 @@
+id = "redbat.mods.xpera"
+name = "Xpera's Doom"
+author = "RedBat Mods"
+version = "1"
+description = "A mod where Xpera griefs your base and you must take revenge."
+longDescription = """
+A mod where Xpera griefs your base and you must take revenge.
+"""
+iconUrl = "https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/rbm_xd.png"
+downloadUrl = "https://github.com/lw-kizii/_/releases/download/mods/xperasdoom.zip"

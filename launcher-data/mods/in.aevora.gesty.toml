@@ -1,0 +1,25 @@
+id = "in.aevora.gesty"
+name = "Gesty - Gesture Controls"
+author = "Aevora Labs and Redstell"
+version = "1.6"
+description = "A Swordigo mod which adds gesture based touch controls!"
+longDescription = """
+Multi-touch gesture controls for Swordigo!
+
+All coordinate thresholds are now density-corrected (dp → px) so the feel is consistent across screen densities.
+Thanks to @Redstell for the artwork!
+Gesture map:
+  Horizontal drag ≥ 5 dp → slow move left/right
+  Continue same direction ≥ 34 dp from anchor → fast run
+  Reverse ≥ 8 dp against current direction → change direction in-place
+  Upward drag ≥ 22 dp (ratio ≥ 0.45) OR high-velocity flick → one jump
+  Lift and flick again for a second jump
+  Double-tap same spot within 330 ms → attack
+  Two fingers land within 120 ms, both lift as short taps within 400 ms → cast selected power-up
+  Move finger held + second-finger double-tap → move and attack concurrently
+
+Requires Kiwi Launcher and GlossHook.
+Logcat tag: GestyV2
+"""
+iconUrl = "https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/gesty.png"
+downloadUrl = "https://github.com/lw-kizii/_/releases/download/mods/gestys.zip"
