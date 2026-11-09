@@ -1,0 +1,9 @@
+id="com.swordiforge.MV"
+name="SwordigoMV"
+version="cave"
+description="A Swordigo mod with reworked content, also known as Swordigo Mogocs version!"
+longDescription="""
+A Swordigo mod created by Mr.mogocs.
+"""
+downloadUrl="https://github.com/lw-kizii/_/releases/download/mods/mv.zip"
+iconUrl="https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/mv.png"
