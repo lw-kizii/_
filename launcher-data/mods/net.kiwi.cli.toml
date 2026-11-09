@@ -1,8 +1,8 @@
-id="net.kiwi.cli"
-name="SwCLI"
-version="1.0"
-description="A mod that lets you run Lua programs..."
-longDescription="""
+id = "net.kiwi.cli"
+name = "SwCLI"
+version = "1.0"
+description = "A mod that lets you run Lua programs..."
+longDescription = """
 ## The Terminal Mod
 This mod brings a `Lua Terminal` so you can execute commands and programs from a single command line.
 
@@ -16,5 +16,5 @@ The text input is used to input commands/programs, for example: `Scene.OverrideL
 The arrow keys (up, down) are used to navigate between previously ran commands.
 The run button... well, it's pretty self explanatory
 """
-downloadUrl="https://github.com/lw-kizii/_/releases/download/mods/cli.zip"
-iconUrl="https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/cli.png"
+downloadUrl = "https://github.com/lw-kizii/_/releases/download/mods/cli.zip"
+iconUrl = "https://raw.githubusercontent.com/lw-kizii/_/main/launcher-data/icons/cli.png"
