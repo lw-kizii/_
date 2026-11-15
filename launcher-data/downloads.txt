@@ -1,6 +1,6 @@
 # Mods (sorted by downloads!)
 com.swordiforge.MV=212
-net.kiwi.cli=170
+net.kiwi.cli=172
 net.kiwi.3d=64
 redbat.mods.xpera=44
 in.aevora.gesty=39
